@@ -1,26 +1,44 @@
 # FinanceManagement
 
-Penelitian kuantitatif dari jurusan Manajemen dengan peminatan Finansial. Hasil kerja sama dengan mahasiswa dari jurusan tersebut. Melakukan Uji Hipotesis untuk mencari faktor berpengaruh menggunakan Regresi Logistik.
+Repositori ini berisi kumpulan analisis kuantitatif dari bidang studi Manajemen dengan peminatan Finansial. Proyek ini merupakan hasil kolaborasi dengan mahasiswa jurusan terkait, yang difokuskan pada pengujian hipotesis dan pencarian faktor-faktor yang paling berpengaruh pada struktur serta fleksibilitas keuangan suatu perusahaan.
 
-## Folder
-### Faktor-Fleksibilitas-Keuangan
-Studi kasus pada perusahaan-perusahaan konsumsi non-cyclicals (FMCG) di Indonesia untuk mencari faktor penentu fleksibilitas keuangan (FFR) dari variabel Profitabilitas (ROA), Tangibility (TAS), Cash Holding (CRO), Struktur Modal (DTR), Retained Earnings (RNR), dan Ukuran Perusahaan (LTA).
+---
 
-Referensi Utama:
+## 📂 Studi Kasus
+
+### 1. Faktor-Fleksibilitas-Keuangan
+Studi kasus ini berfokus pada **perusahaan-perusahaan konsumsi *non-cyclicals* (FMCG)** di Indonesia. Tujuannya adalah untuk mencari faktor penentu dari **Fleksibilitas Keuangan (FFR)** berdasarkan sejumlah variabel independen, yaitu:
+- **ROA** (Profitabilitas)
+- **TAS** (Tangibility)
+- **CRO** (Cash Holding)
+- **DTR** (Struktur Modal)
+- **RNR** (Retained Earnings)
+- **LTA** (Ukuran Perusahaan)
+
+**Referensi Utama:**
 > D. A. Nugraha, S. Muchtar, and A. Abyantara, "Faktor penentu fleksibilitas keuangan perusahaan barang konsumsi di Indonesia," *Jurnal Ekonomi Trisakti*, vol. 5, no. 2, pp. 1181-1188, 2025, doi: [10.25105/v5i2.23180](https://doi.org/10.25105/v5i2.23180).
 
-Dataset diperoleh secara prime dengan menghubungi Author secara langsung
+*Catatan: Dataset diperoleh secara primer dengan menghubungi Author secara langsung.*
+> ⚠️ **DISCLAIMER:** Terdapat sedikit perbedaan versi antara data yang tercantum di literatur referensi dengan data yang digunakan di sini, sehingga hasil akhirnya akan sedikit berbeda.
 
-> **DISCLAIMER:** Data di referensi (penelitian) dengan data yang didapatkan ada sedikit perbedaan versi sehingga hasilnya akan berbeda
+#### 📝 Notebooks:
 
-#### [01_Regresi_Logistik.ipynb](Faktor-Fleksibilitas-Keuangan/01_Regresi_Logistik.ipynb)
-Melakukan pendekatan kuantitatif menggunakan Regresi Logistik sesuai referensi utama. Tahapan yang dilakukan meliputi Ekplorasi Data, Uji Asumsi Klasik (Multikolinearitas/VIF), dan Uji Hipotesis. Hasil menunjukkan bahwa variabel Cash Holding (CRO) berpengaruh signifikan terhadap fleksibilitas keuangan (FFR).
+*   **[01_Regresi_Logistik.ipynb](Faktor-Fleksibilitas-Keuangan/01_Regresi_Logistik.ipynb)**
+    Melakukan pendekatan kuantitatif menggunakan metode Regresi Logistik sesuai dengan referensi utama. Tahapan analisis meliputi pengenalan masalah, eksplorasi data (EDA), Uji Asumsi Logistik (seperti pengecekan Multikolinearitas menggunakan VIF), dan Uji Hipotesis. Hasil dari pemodelan ini menunjukkan bahwa variabel **Cash Holding (CRO)** berpengaruh paling signifikan terhadap fleksibilitas keuangan (FFR).
 
-#### 02_Metode_Lain.ipynb
-Masih Coming Soon, tapi akan berencana untuk menggunakan metode lain untuk mencari faktor berpengaruh seperti Korelasi, Independent T-Test, Feature Importance, dsb.
+*   **[02_Metode_Lain.ipynb](Faktor-Fleksibilitas-Keuangan/02_Metode_Lain.ipynb)**
+    Eksplorasi tingkat lanjut untuk menguji tingkat pengaruh setiap variabel menggunakan berbagai metode alternatif. Metode yang diterapkan dalam notebook ini meliputi:
+    - **Uji Korelasi**: Point-Biserial dan Rank-Biserial.
+    - **Uji Beda Rata-rata**: Independent T-Test, Welch's T-Test, dan Mann-Whitney U.
+    - **Machine Learning (Ensemble Methods)**: Random Forest & XGBoost.
+    - **Analisis Fitur Ensemble (Feature Importance)**: Gini Importance, SHAP values, Permutation Importance, dan Recursive Feature Elimination (RFE/RFECV).
+    - **SelectKBest**: ANOVA dan Mutual Information
 
-### 03_Model_Prediksi.ipynb
-Masih Coming Soon. Rencana untuk membangun model prediksi.
+*   **[03_Model_Prediksi.ipynb](Faktor-Fleksibilitas-Keuangan/03_Model_Prediksi.ipynb)**
+    *(Coming Soon)* Rencana untuk membangun model prediksi klasifikasi untuk menebak tingkat fleksibilitas keuangan perusahaan di masa depan.
 
-### Determinan-Capital-Structure
-Studi kasus pada perusahaan-perusahaan properti. Masih Coming Soon.
+---
+
+### 2. Determinan-Capital-Structure
+Studi kasus pada perusahaan-perusahaan sektor properti.
+*(Coming Soon)*
