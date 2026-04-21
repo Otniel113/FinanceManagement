@@ -33,6 +33,7 @@ Studi kasus ini berfokus pada **perusahaan-perusahaan konsumsi *non-cyclicals* (
     - **Random Forest dan XGBoost**: Feature Importance, SHAP values, Permutation Importance, dan Recursive Feature Elimination (RFE/RFECV).
     - **Regresi Logistik L1 LASSO**: Koefisien dengan penalti
     - **SelectKBest**: ANOVA dan Mutual Information
+    
     Variabel **Cash Holding (CRO)** hampir selalu jadi variabel terpenting dari semua metode tersebut.
 
 *   **[03_Model_Prediksi.ipynb](Faktor-Fleksibilitas-Keuangan/03_Model_Prediksi.ipynb)**
