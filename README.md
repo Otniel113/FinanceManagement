@@ -19,7 +19,7 @@ Studi kasus ini berfokus pada **perusahaan-perusahaan konsumsi *non-cyclicals* (
 > D. A. Nugraha, S. Muchtar, and A. Abyantara, "Faktor penentu fleksibilitas keuangan perusahaan barang konsumsi di Indonesia," *Jurnal Ekonomi Trisakti*, vol. 5, no. 2, pp. 1181-1188, 2025, doi: [10.25105/v5i2.23180](https://doi.org/10.25105/v5i2.23180).
 
 *Catatan: Dataset diperoleh secara primer dengan menghubungi Author secara langsung.*
-> ⚠️ **DISCLAIMER:** Terdapat sedikit perbedaan versi antara data yang tercantum di literatur referensi dengan data yang digunakan di sini, sehingga hasil akhirnya akan sedikit berbeda.
+> ⚠️ **DISCLAIMER:** Terdapat perbedaan versi antara data yang tercantum di literatur referensi dengan data yang digunakan di sini, sehingga hasil akhirnya akan ada perbedaan.
 
 #### 📝 Notebooks:
 
@@ -30,12 +30,13 @@ Studi kasus ini berfokus pada **perusahaan-perusahaan konsumsi *non-cyclicals* (
     Eksplorasi tingkat lanjut untuk menguji tingkat pengaruh setiap variabel menggunakan berbagai metode alternatif. Metode yang diterapkan dalam notebook ini meliputi:
     - **Uji Korelasi**: Point-Biserial dan Rank-Biserial.
     - **Uji Beda Rata-rata**: Independent T-Test, Welch's T-Test, dan Mann-Whitney U.
-    - **Machine Learning (Ensemble Methods)**: Random Forest & XGBoost.
-    - **Analisis Fitur Ensemble (Feature Importance)**: Gini Importance, SHAP values, Permutation Importance, dan Recursive Feature Elimination (RFE/RFECV).
+    - **Random Forest dan XGBoost**: Feature Importance, SHAP values, Permutation Importance, dan Recursive Feature Elimination (RFE/RFECV).
+    - **Regresi Logistik L1 LASSO**: Koefisien dengan penalti
     - **SelectKBest**: ANOVA dan Mutual Information
+    Variabel **Cash Holding (CRO)** hampir selalu jadi variabel terpenting dari semua metode tersebut.
 
 *   **[03_Model_Prediksi.ipynb](Faktor-Fleksibilitas-Keuangan/03_Model_Prediksi.ipynb)**
-    *(Coming Soon)* Rencana untuk membangun model prediksi klasifikasi untuk menebak tingkat fleksibilitas keuangan perusahaan di masa depan.
+    Membangun model prediksi klasifikasi untuk menebak tingkat fleksibilitas keuangan (FFR) perusahaan. Model ini dibangun menggunakan algoritma **Regresi Logistik** (*Machine Learning*). Proses yang dilakukan mencakup pra-pemrosesan data (*Train-Test Split*), pencarian hyperparameter terbaik menggunakan GridSearchCV, dan evaluasi model (Akurasi, ROC-AUC, dll). Model yang dibangun ada 2: Pertama dengan memasukan seluruh 6 variabel, dan kedua hanya memasukan **CRO**. Didapatkan model terbaik adalah yang kedua. Model kemudian diekspor dan disimpan dalam bentuk file `.pkl` (`lr2_final_model.pkl`) sehingga siap untuk digunakan lebih lanjut (misal untuk *deployment* aplikasi).
 
 ---
 
