@@ -65,5 +65,8 @@ Studi kasus ini berfokus pada **perusahaan-perusahaan sektor properti** di Indon
 *   **[02_Linear_vs_Tree.ipynb](Determinan-Capital-Structure/02_Linear_vs_Tree.ipynb)**
     Membandingkan performa pendekatan statistik linear (Regresi Panel) dengan algoritma *Machine Learning* berbasis pohon (Random Forest Regressor). Evaluasi pemodelan dilakukan menggunakan metrik seperti skor OOB (*Out-Of-Bag*) R-Squared, RMSE, dan MAE untuk menangkap pola non-linear. Notebook ini juga membedah *Feature Importance* guna mencari perbandingan mengenai teori ekonometrika keuangan dengan realitas faktor pendorong di lapangan (seperti penemuan fenomena *Unobserved Heterogeneity* pada nama emiten dibandingkan sekadar urusan *tax shield*). Serta, menguji kembali variabel-variabel yang sebelumnya harus dibuang (seperti SIZ) akibat ketidakmampuan regresi linear dalam menangani multikolinearitas.
 
-*   **03_Model_Prediksi.ipynb**
-    *(Coming Soon)* Rencana untuk membangun model prediksi untuk menebak nilai **DER** dan **TDR** di tahun mendatang menggunakan algoritma **Random Forest Regressor** berdasarkan pola historis yang telah ditemukan.   
+*   **[03A_Prediksi_DER.ipynb](Determinan-Capital-Structure/03A_Prediksi_DER.ipynb)**
+    Membangun model prediksi nilai **DER (Debt-to-Equity Ratio)** di masa mendatang menggunakan algoritma **Random Forest Regressor**. Tahapan analitik meliputi rekayasa fitur (*Feature Engineering*) seperti menambahkan variabel *lag* untuk target dan menyederhanakan data emiten (mengelompokkan *Top Emiten* dari *Unobserved Heterogeneity* temuan pada notebook sebelumnya). Evaluasi model melibatkan *Time-Based Train-Test Split* serta *Hyperparameter Tuning* menggunakan *TimeSeriesSplit* dari *GridSearchCV* guna memastikan tidak ada kebocoran data historis vs masa depan. Model yang paling optimal kemudian diekspor menjadi `.pkl` (`03_model_rf_der.pkl`).
+
+*   **03B_Prediksi_TDR.ipynb**
+    *(Coming Soon)* Rencana untuk membangun model prediksi untuk menebak nilai **TDR (Total Debt Ratio)** di masa mendatang.   
