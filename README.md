@@ -62,5 +62,8 @@ Studi kasus ini berfokus pada **perusahaan-perusahaan sektor properti** di Indon
 *   **[01_Analisis_Panel.ipynb](Determinan-Capital-Structure/01_Analisis_Panel.ipynb)**
     Melakukan pendekatan kuantitatif menggunakan metode **Analisis Data Panel**. Tahapan yang dilakukan meliputi manipulasi dan penyusunan data panel, statistik deskriptif, visualisasi matriks korelasi (*Within-Entity* & *Between-Entity*), serta Pemilihan Model (Pengevulasian metode *Common Effect Model*, *Fixed Effect Model*, dan *Random Effect Model*) melalui instrumen Uji Spesifikasi seperti Uji Chow dan Uji Hausman. Dibangun 2 model yang pertama untuk prediksi **DER** dan yang kedua untuk prediksi **TDR**. Hasil akhir adalah beberapa faktor-faktor penentu yang signifikan dan seberapa besar pengaruhnya.
 
-*   **[02_Coming_Soon.ipynb](Determinan-Capital-Structure/02_Coming_Soon.ipynb)**
-    *(Coming Soon)* Eksplorasi tingkat lanjut dan implementasi metode statistika prediksi dengan algoritma algoritma **Machine Learning** untuk mengidentifikasi dan memprediksi pola struktur modal perusahaan properti tersebut.
+*   **[02_Linear_vs_Tree.ipynb](Determinan-Capital-Structure/02_Linear_vs_Tree.ipynb)**
+    Membandingkan performa pendekatan statistik linear (Regresi Panel) dengan algoritma *Machine Learning* berbasis pohon (Random Forest Regressor). Evaluasi pemodelan dilakukan menggunakan metrik seperti skor OOB (*Out-Of-Bag*) R-Squared, RMSE, dan MAE untuk menangkap pola non-linear. Notebook ini juga membedah *Feature Importance* guna mencari perbandingan mengenai teori ekonometrika keuangan dengan realitas faktor pendorong di lapangan (seperti penemuan fenomena *Unobserved Heterogeneity* pada nama emiten dibandingkan sekadar urusan *tax shield*). Serta, menguji kembali variabel-variabel yang sebelumnya harus dibuang (seperti SIZ) akibat ketidakmampuan regresi linear dalam menangani multikolinearitas.
+
+*   **03_Model_Prediksi.ipynb**
+    *(Coming Soon)* Rencana untuk membangun model prediksi untuk menebak nilai **DER** dan **TDR** di tahun mendatang menggunakan algoritma **Random Forest Regressor** berdasarkan pola historis yang telah ditemukan.   
