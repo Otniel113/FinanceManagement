@@ -1,6 +1,6 @@
 # FinanceManagement
 
-Repositori ini berisi kumpulan analisis kuantitatif dari bidang studi Manajemen dengan peminatan Finansial. Proyek ini merupakan hasil kolaborasi dengan mahasiswa jurusan terkait, yang difokuskan pada pengujian hipotesis dan pencarian faktor-faktor yang paling berpengaruh pada struktur serta fleksibilitas keuangan suatu perusahaan.
+Repositori ini berisi kumpulan analisis kuantitatif dari bidang studi Manajemen dengan peminatan Finansial. Proyek ini merupakan hasil kolaborasi dengan mahasiswa jurusan terkait. Fokusnya adalah uji hipotesis untuk mencari pengaruh dan apa saja yang mempengaruhi dari fleksibilitas keuangan perusahaan FMCG menggunkana Regresi Logistik dan juga struktur model perusahaan properti menggunakan Analisis Panel.
 
 ---
 
@@ -42,5 +42,25 @@ Studi kasus ini berfokus pada **perusahaan-perusahaan konsumsi *non-cyclicals* (
 ---
 
 ### 2. Determinan-Capital-Structure
-Studi kasus pada perusahaan-perusahaan sektor properti.
-*(Coming Soon)*
+Studi kasus ini berfokus pada **perusahaan-perusahaan sektor properti** di Indonesia. Tujuannya adalah untuk mencari faktor penentu dari **Struktur Modal**, yang diukur menggunakan dua variabel dependen yaitu **Debt-to-Equity Ratio (DER)** dan **Total Debt Ratio (TDR)**. Variabel independen yang diuji meliputi:
+- **ROE** (Profitabilitas)
+- **TAN** (Struktur Aset Fisik / Tangibility)
+- **LIQ** (Likuiditas)
+- **GRW** (Pertumbuhan Perusahaan)
+- **SIZ** (Ukuran Perusahaan)
+- **TAX** (Beban Pajak)
+- **AGE** (Umur Perusahaan)
+- **NDTS** (Penghematan Pajak Selain Utang)
+
+**Referensi Utama:**
+> *(Dalam proses publikasi)* "Determinan of Capital Structure dari Perusahaan Properti"
+
+*Catatan: Dataset diperoleh secara primer dengan menghubungi Author secara langsung.*
+
+#### 📝 Notebooks:
+
+*   **[01_Analisis_Panel.ipynb](Determinan-Capital-Structure/01_Analisis_Panel.ipynb)**
+    Melakukan pendekatan kuantitatif menggunakan metode **Analisis Data Panel**. Tahapan yang dilakukan meliputi manipulasi dan penyusunan data panel, statistik deskriptif, visualisasi matriks korelasi (*Within-Entity* & *Between-Entity*), serta Pemilihan Model (Pengevulasian metode *Common Effect Model*, *Fixed Effect Model*, dan *Random Effect Model*) melalui instrumen Uji Spesifikasi seperti Uji Chow dan Uji Hausman. Dibangun 2 model yang pertama untuk prediksi **DER** dan yang kedua untuk prediksi **TDR**. Hasil akhir adalah beberapa faktor-faktor penentu yang signifikan dan seberapa besar pengaruhnya.
+
+*   **[02_Coming_Soon.ipynb](Determinan-Capital-Structure/02_Coming_Soon.ipynb)**
+    *(Coming Soon)* Eksplorasi tingkat lanjut dan implementasi metode statistika prediksi dengan algoritma algoritma **Machine Learning** untuk mengidentifikasi dan memprediksi pola struktur modal perusahaan properti tersebut.
