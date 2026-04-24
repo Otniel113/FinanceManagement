@@ -68,5 +68,6 @@ Studi kasus ini berfokus pada **perusahaan-perusahaan sektor properti** di Indon
 *   **[03A_Prediksi_DER.ipynb](Determinan-Capital-Structure/03A_Prediksi_DER.ipynb)**
     Membangun model prediksi nilai **DER (Debt-to-Equity Ratio)** di masa mendatang menggunakan algoritma **Random Forest Regressor**. Tahapan analitik meliputi rekayasa fitur (*Feature Engineering*) seperti menambahkan variabel *lag* untuk target dan menyederhanakan data emiten (mengelompokkan *Top Emiten* dari *Unobserved Heterogeneity* temuan pada notebook sebelumnya). Evaluasi model melibatkan *Time-Based Train-Test Split* serta *Hyperparameter Tuning* menggunakan *TimeSeriesSplit* dari *GridSearchCV* guna memastikan tidak ada kebocoran data historis vs masa depan. Model yang paling optimal kemudian diekspor menjadi `.pkl` (`03_model_rf_der.pkl`).
 
-*   **03B_Prediksi_TDR.ipynb**
-    *(Coming Soon)* Rencana untuk membangun model prediksi untuk menebak nilai **TDR (Total Debt Ratio)** di masa mendatang.   
+*   **[03B_Prediksi_TDR.ipynb](Determinan-Capital-Structure/03B_Prediksi_TDR.ipynb)**
+    Membangun model prediksi nilai **TDR (Total Debt Ratio)** di masa mendatang menggunakan algoritma **Random Forest Regressor**.
+    Tahapan analitik dan prapemrosesan cukup menambah variabel *Lag* untuk target dan tidak memerlukan pengelompokkan Emiten. Evaluasi model masih sama yaitu melakukan *Time-Based Train-Test Split* serta *Hyperparameter Tuning* menggunakan *TimeSeriesSplit* dari *GridSearchCV*. Model yang paling optimal kemudian diekspor menjadi `.pkl` (`03_model_rf_tdr.pkl`)
