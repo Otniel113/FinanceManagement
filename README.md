@@ -4,6 +4,10 @@ Repositori ini berisi kumpulan analisis kuantitatif dari bidang studi Manajemen 
 
 ---
 
+## 🚀 Deployment
+### 1. FleksFin - FMCG Predictor
+Hasil implementasi dari Faktor-Fleksibilitas-Keuangan. Untuk informasi teknis lebih lengkap silahkan ke [README FleksFin](FleksFin/README.md). Link deployment masih *Coming Soon*.
+
 ## 📂 Studi Kasus
 
 ### 1. Faktor-Fleksibilitas-Keuangan
