@@ -194,7 +194,7 @@
                                     <div>
                                         <div class="section-eyebrow mb-2">Hasil Prediksi</div>
                                         <h3 class="h4 fw-bold mb-2">{{ result.title }}</h3>
-                                        <p class="text-secondary mb-0">{{ result.description }}</p>
+                                        <p class="text-secondary mb-0" style="white-space: pre-line">{{ result.description | safe }}</p>
                                     </div>
                                     <div class="text-md-end">
                                         <div class="small text-secondary">CRO</div>

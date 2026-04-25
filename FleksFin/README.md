@@ -9,6 +9,11 @@ Aplikasi ini dibangun menggunakan framework [Flask](https://flask.palletsproject
 FleksFin/
 ├── app.py                   # File utama aplikasi (routing dan logic backend)
 ├── requirements.txt         # Daftar dependency package Python
+├── controllers/             # Logika bisnis dan pemrosesan model
+│   ├── __init__.py
+│   └── predict_ffr.py       # Pemrosesan prediksi menggunakan Machine Learning
+├── ml-models/               # Tempat penyimpanan model terlatih (.pkl)
+│   └── lr2_final_model.pkl
 ├── static/                  # File statis (CSS, JavaScript, gambar)
 │   ├── css/style.css
 │   └── js/script.js
@@ -23,7 +28,8 @@ FleksFin/
 
 - **Simple Mode**: Memasukkan parameter dasar untuk menghitung CRO.
 - **Full Mode**: Memasukkan parameter lebih spesifik untuk menganalisis fleksibilitas finansial.
-- **Prediksi Fleksibilitas**: Menentukan apakah perusahaan terindikasi fleksibel secara finansial berdasarkan rata-rata industri (Dummy threshold CRO = 0.12).
+- **Prediksi Machine Learning**: Memberikan prediksi status fleksibilitas menggunakan model Regresi Logistik yang terlatih.
+- **Antarmuka Responsif**: Dilengkapi dengan smooth scrolling dan validasi input sisi klien.
 
 ## Persyaratan (Prerequisites)
 

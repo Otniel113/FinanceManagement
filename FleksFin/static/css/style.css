@@ -112,6 +112,15 @@ body {
     border-color: rgba(239, 68, 68, 0.24);
 }
 
+.result-probably-flexible {
+    background: #fffbeb;
+    border-color: rgba(245, 158, 11, 0.24);
+}
+
+.result-box b[style*="color: green"], .result-box b[style*="color: red"] {
+    font-weight: bold;
+}
+
 .number-hint {
     color: var(--fleksfin-muted);
     font-size: 0.9rem;
