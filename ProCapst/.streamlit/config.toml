@@ -1,0 +1,18 @@
+[theme]
+# Mengunci basis ke dark mode
+base="dark"
+
+# Warna Utama (Merah Strategis - Bold Red)
+primaryColor="#E11D48"
+
+# Warna Latar Belakang (Deep Charcoal - Bukan Hitam Total)
+backgroundColor="#121826"
+
+# Warna Latar Belakang Sidebar & Widget (Gunmetal)
+secondaryBackgroundColor="#1F2937"
+
+# Warna Teks (Off-White untuk kenyamanan mata)
+textColor="#F1F5F9"
+
+# Font Gaya Modern
+font="sans serif"
