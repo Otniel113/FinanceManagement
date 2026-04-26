@@ -8,9 +8,9 @@ Repositori ini berisi kumpulan analisis kuantitatif dari bidang studi Manajemen 
 ### 1. FleksFin - FMCG Predictor
 Hasil implementasi dari Faktor-Fleksibilitas-Keuangan. Untuk informasi teknis lebih lengkap silahkan ke [README FleksFin](FleksFin/README.md). Link deployment: 
 
-https://fleksfin.pythonanywhere.com/ .
+https://fleksfin.pythonanywhere.com/
 
-### 2. ProCapst
+### 2. ProCapst Analytics
 Hasil implementasi dari Determinan-Capital-Structure. Untuk informasi teknis lebih lengkap silahkan ke [README ProCapst](ProCapst/README.md). Link deployment:
 
 Masih *Coming Soon*
