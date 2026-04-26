@@ -10,13 +10,9 @@ def render(df_raw=None, df_hasil=None, variabel_x=None, variabel_y=None, model_d
 
     st.header("🔮 Simulasi & Prediksi Machine Learning")
     
-    # --- LOAD MODEL (PENTING: Ganti path sesuai letak file .pkl Anda) ---
-    try:
-        model_der = joblib.load('pickles-import/03_model_rf_der.pkl')
-        model_tdr = joblib.load('pickles-import/03_model_rf_tdr.pkl')
-        emiten_top = joblib.load('pickles-import/02_model1_features_emiten.pkl')
-    except Exception as e:
-        st.error(f"Gagal memuat model: {e}. Pastikan file .pkl berada di folder yang benar.")
+    # Model loaded via arguments from app.py
+    if model_der is None or model_tdr is None or emiten_top is None:
+        st.error("Model gagal dimuat dan diteruskan ke tab ini!")
         st.stop()
 
     fitur_der = ['ROE', 'TAN', 'LIQ', 'GRW', 'SIZ', 'TAX', 'AGE', 'NDTS', 'DER', 'Is_Top_Emiten']

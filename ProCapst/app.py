@@ -2,6 +2,7 @@
 import pandas as pd
 import numpy as np
 import joblib
+import os
 
 from tabs import tab01_beranda, tab02_master_data, tab03_visualisasi_data, tab04_prediksi
 from utils.preprocessing import TopEmitenTransformer
@@ -11,14 +12,17 @@ from utils.preprocessing import TopEmitenTransformer
 # ==========================================
 st.set_page_config(page_title="ProCapst Analytics", page_icon="🏢", layout="wide")
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # ==========================================
 # FUNGSI MEMUAT DATA (Dari Excel Asli)
 # ==========================================
 @st.cache_data
 def load_data():
     try:
-        df_raw = pd.read_excel('data/Property_Data.xlsx', sheet_name='RAW DATA')
-        df_hasil = pd.read_excel('data/Property_Data.xlsx', sheet_name='HASIL PERHITUNGAN')
+        data_path = os.path.join(BASE_DIR, 'data', 'Property_Data.xlsx')
+        df_raw = pd.read_excel(data_path, sheet_name='RAW DATA')
+        df_hasil = pd.read_excel(data_path, sheet_name='HASIL PERHITUNGAN')
         return df_raw, df_hasil
     except FileNotFoundError:
         st.error("File 'Property_Data.xlsx' tidak ditemukan! Pastikan file Excel tersebut berada di folder yang sama dengan aplikasi.")
@@ -30,9 +34,9 @@ def load_data():
 @st.cache_resource
 def load_models():
     try:
-        model_der = joblib.load('pickles-import/03_model_rf_der.pkl')
-        model_tdr = joblib.load('pickles-import/03_model_rf_tdr.pkl')
-        emiten_top = joblib.load('pickles-import/02_model1_features_emiten.pkl')
+        model_der = joblib.load(os.path.join(BASE_DIR, 'pickles-import', '03_model_rf_der.pkl'))
+        model_tdr = joblib.load(os.path.join(BASE_DIR, 'pickles-import', '03_model_rf_tdr.pkl'))
+        emiten_top = joblib.load(os.path.join(BASE_DIR, 'pickles-import', '02_model1_features_emiten.pkl'))
         return model_der, model_tdr, emiten_top
     except Exception as e:
         st.error(f"Gagal memuat model: {e}. Pastikan file .pkl berada di folder yang benar.")
