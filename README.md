@@ -1,10 +1,16 @@
 # FinanceManagement
 
-Repositori ini berisi kumpulan analisis kuantitatif dari bidang studi Manajemen dengan peminatan Finansial. Proyek ini merupakan hasil kolaborasi dengan mahasiswa jurusan terkait. Fokusnya adalah uji hipotesis untuk mencari pengaruh dan apa saja yang mempengaruhi dari fleksibilitas keuangan perusahaan FMCG menggunkana Regresi Logistik dan juga struktur model perusahaan properti menggunakan Analisis Panel.
+Repositori ini berisi kumpulan analisis kuantitatif dari bidang studi Manajemen dengan peminatan Finansial. Proyek ini merupakan hasil kolaborasi dengan mahasiswa jurusan terkait. Penelitian ini menggunakan 3 langkah pendekatan:
+
+1. Uji hipotesis untuk mencari pengaruh dan apa saja yang mempengaruhi dari fleksibilitas keuangan perusahaan FMCG menggunkana Regresi Logistik dan juga struktur model perusahaan properti menggunakan Analisis Panel.
+2. Menguji apakah apakah variabel yang mempengaruhi itu tetap relevan atau signifikan jika diuji dengan metode yang lain.
+3. Melakukan prediksi menggunakan machine learning, dengan algoritma yang digunakan adalah tetap Regresi Logistik untuk kasus fleksibilitas keuangan, dan Random Forest untuk kasus struktur modal (*capital structure*).
 
 ---
 
 ## 🚀 Deployment
+Halaman utama ada pada: https://otnielabiezer.com/FinanceManagement yang berperan sebagai halaman awal (beranda) sebelum navigasi ke:
+
 ### 1. FleksFin - FMCG Predictor
 Hasil implementasi dari Faktor-Fleksibilitas-Keuangan. Untuk informasi teknis lebih lengkap silahkan ke [README FleksFin](FleksFin/README.md). Link deployment: 
 
@@ -13,7 +19,7 @@ https://fleksfin.pythonanywhere.com/
 ### 2. ProCapst Analytics
 Hasil implementasi dari Determinan-Capital-Structure. Untuk informasi teknis lebih lengkap silahkan ke [README ProCapst](ProCapst/README.md). Link deployment:
 
-Masih *Coming Soon*
+https://procapst.streamlit.app/
 
 ## 📂 Studi Kasus
 
