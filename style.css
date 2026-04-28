@@ -61,12 +61,18 @@
 
 /* ── Global ──────────────────────────────────────────────────── */
 
+html {
+    overflow-x: hidden;
+}
+
 * {
     scroll-behavior: smooth;
 }
 
 body {
     min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 48px; /* Offset for fixed-top navbar */
     color: var(--fm-text);
     background:
         radial-gradient(

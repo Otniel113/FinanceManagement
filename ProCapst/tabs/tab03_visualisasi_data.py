@@ -97,10 +97,11 @@ def render(df_raw=None, df_hasil=None, variabel_x=None, variabel_y=None, model_d
             sc_y = st.selectbox("Sumbu Y (Target):", variabel_y, index=1)
             
         # Mengecualikan 2025 (krn metrik fundamental-nya NaN semua)
-        df_scatter = st.session_state['df_hasil'][st.session_state['df_hasil']['Tahun'] != 2025].dropna(subset=[sc_x, sc_y, 'SIZ'])
-        fig_scatter = px.scatter(df_scatter, x=sc_x, y=sc_y, size='SIZ', color='Emiten', hover_name='Emiten',
-                                 animation_frame='Tahun', size_max=40,
-                                 title=f"{sc_x} vs {sc_y} (Ukuran Bola = SIZ)", template='plotly_dark')
+        df_scatter = st.session_state['df_hasil'][st.session_state['df_hasil']['Tahun'] != 2025].dropna(subset=[sc_x, sc_y])
+        fig_scatter = px.scatter(df_scatter, x=sc_x, y=sc_y, color='Emiten', hover_name='Emiten',
+                                 animation_frame='Tahun',
+                                 title=f"{sc_x} vs {sc_y}", template='plotly_dark')
+        fig_scatter.update_traces(marker=dict(size=12))
         st.plotly_chart(fig_scatter, config={'displayModeBar': True, 'responsive': True})
 
 # ==========================================
