@@ -38,6 +38,12 @@ def render(df_raw=None, df_hasil=None, variabel_x=None, variabel_y=None, model_d
         * **AGE (Firm Age):** Umur perusahaan sejak berdiri/IPO.
         * **NDTS (Non-Debt Tax Shield):** Perlindungan pajak dari instrumen selain utang.
         """)
+    
+    st.divider()
+    st.subheader("📌 Daftar Pustaka")
+    st.markdown("""
+    "Determinan of Capital Structure dari Perusahaan Properti" *(Dalam proses publikasi)*
+    """)
 
 # ==========================================
 # TAB 2: MASTER DATA

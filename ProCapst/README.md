@@ -30,7 +30,7 @@ ProCapst/
 
 ## Persyaratan (Prerequisites)
 
-- Python 3.7+
+- Python 3.10+
 - Pip (Python Package Installer)
 
 ## Cara Instalasi dan Penggunaan

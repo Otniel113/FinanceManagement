@@ -33,7 +33,7 @@ FleksFin/
 
 ## Persyaratan (Prerequisites)
 
-- Python 3.7+
+- Python versi 3.9 sampai 3.12
 - Pip (Python Package Installer)
 
 ## Cara Instalasi dan Penggunaan
